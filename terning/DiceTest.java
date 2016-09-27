@@ -2,6 +2,7 @@ package terning;
 
 import org.junit.After;
 import org.junit.Before;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.regex.Pattern;
