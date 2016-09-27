@@ -13,7 +13,6 @@
 // 2. The program rolls the dice one time less than asked
 // 3. The dice is not symetric. It will roll too few ones and six'es
 
-
 package terning;
 
 import java.util.Scanner;
@@ -21,12 +20,29 @@ import java.util.Scanner;
 public class UseDice {
 
     public static void main(String[] args) {
+
+
         Dice cup = new Dice();   // Make an instance of Dice
         Scanner keyboard = new Scanner(System.in);   // Make an instance of keyboard Scanner
+
+
         System.out.println("Welcome to the diceroll program");
         System.out.println("How many times do you want to roll the dice?");
+
         int n = keyboard.nextInt();  // Read integer
-        cup.rollMultiple(n);         // Roll the dice n times
+
+        //Using the method rollMultiple 10 times
+
+        for (int i = 0; i < 10; i++) {
+
+            cup.rollMultiple(n);         // Roll the dice n times
+
+
+
+        }
+
         keyboard.close();            // Close the scanner
+
     }
+
 }
