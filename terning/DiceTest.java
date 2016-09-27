@@ -2,9 +2,6 @@ package terning;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.regex.Pattern;
@@ -67,7 +64,7 @@ public class DiceTest {
 
     }
 
-    //Print out test (http://stackoverflow.com/questions/1119385/junit-test-for-system-out-println)
+    //region Print-out Test (http://stackoverflow.com/questions/1119385/junit-test-for-system-out-println)
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 
@@ -83,6 +80,7 @@ public class DiceTest {
         System.setErr(null);
     }
 
+
     @org.junit.Test
     public void rollMultiple() throws Exception {
         dice.rollMultiple(1);
@@ -92,5 +90,6 @@ public class DiceTest {
         dice.rollMultiple(3);
         assertEquals(true, Pattern.matches("\\d.\\d.\\d.", outContent.toString()));
     }
+    //endregion
 
 }
